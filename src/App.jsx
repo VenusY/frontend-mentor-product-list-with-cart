@@ -5,6 +5,8 @@ import Cart from './components/Cart';
 
 export default function App() {
   const [emptyCart, setEmptyCart] = useState(true);
+  const [addedItems, setAddedItems] = useState([]);
+  const [displayModal, setDisplayModal] = useState(false);
 
   return (
     <>
