@@ -5,9 +5,9 @@ export default function OrderItem({ name, quantity, price }) {
         <p className='order-item__name'>{name}</p>
 
         <div className='order-item__container'>
-          <p className='order-item__quantity'>{quantity}</p>
-          <p className='order-item__price'>{price}</p>
-          <p className='order-item__total'>{price * quantity}</p>
+          <p className='order-item__quantity'>{quantity}x</p>
+          <p className='order-item__price'>@ ${price.toFixed(2)}</p>
+          <p className='order-item__total'>${(price * quantity).toFixed(2)}</p>
         </div>
       </div>
 
