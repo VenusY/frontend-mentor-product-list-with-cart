@@ -22,7 +22,7 @@ export default function App() {
       }}
     >
       <ProductList />
-      <Cart emptyCart={emptyCart} />
+      <Cart emptyCart={emptyCart} addedItems={addedItems} />
     </PageContext.Provider>
   );
 }
