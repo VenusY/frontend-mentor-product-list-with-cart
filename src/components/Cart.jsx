@@ -1,3 +1,4 @@
+import '../styles/scss/Cart.scss';
 import CartPlaceholder from './CartPlaceholder';
 import Order from './Order';
 

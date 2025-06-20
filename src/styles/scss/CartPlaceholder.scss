@@ -1,0 +1,16 @@
+@use './util' as u;
+
+.cart-placeholder {
+  &__image {
+    width: 120px;
+    margin-inline: auto;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: u.rem(14);
+    font-weight: 600;
+    color: var(--rose-500);
+  }
+}

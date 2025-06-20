@@ -1,3 +1,5 @@
+import '../styles/scss/CartPlaceholder.scss';
+
 export default function CartPlaceholder() {
   return (
     <div className='cart-placeholder'>

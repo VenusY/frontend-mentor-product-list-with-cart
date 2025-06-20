@@ -1,0 +1,15 @@
+@use './util' as u;
+
+.cart {
+  padding: 27px 24px 39px;
+  background: var(--white);
+  border-radius: 10px;
+
+  &__heading {
+    margin-bottom: 40px;
+    font-size: u.rem(24);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--red);
+  }
+}
