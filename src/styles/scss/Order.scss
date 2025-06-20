@@ -1,0 +1,15 @@
+@use './util' as u;
+
+.order {
+  &__confirm-button {
+    cursor: pointer;
+    width: 100%;
+    padding: 16px;
+    background: var(--red);
+    border: none;
+    border-radius: 1000px;
+    font-size: u.rem(16);
+    font-weight: 600;
+    color: var(--white);
+  }
+}

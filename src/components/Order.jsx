@@ -1,3 +1,4 @@
+import '../styles/scss/Order.scss';
 import OrderList from './OrderList';
 import OrderTotal from './OrderTotal';
 import OrderInfo from './OrderInfo';
