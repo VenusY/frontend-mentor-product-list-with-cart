@@ -1,0 +1,10 @@
+@use './util' as u;
+
+.product-list {
+  &__heading {
+    font-size: u.rem(40);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--rose-900);
+  }
+}

@@ -1,3 +1,4 @@
+import '../styles/scss/ProductList.scss';
 import Menu from './Menu/Menu';
 
 export default function ProductList() {

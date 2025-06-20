@@ -15,3 +15,9 @@
 
   --ff: 'Red Hat Text', sans-serif;
 }
+
+body {
+  padding: 24px;
+  background: hsl(26, 54%, 97%);
+  font-family: var(--ff);
+}

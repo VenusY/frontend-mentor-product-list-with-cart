@@ -1,4 +1,5 @@
 import './styles/reset.css';
+import './styles/scss/App.scss';
 import { useState } from 'react';
 import { PageContext } from './contexts/PageContext';
 import ProductList from './components/ProductList';
