@@ -4,7 +4,7 @@ import OrderItem from './OrderItem';
 
 export default function OrderList() {
   const { addedItems } = useContext(PageContext);
-  const addedItemsArray = [...addedItems.entries()];
+  const addedItemsArray = [...addedItems];
 
   return (
     <div>
