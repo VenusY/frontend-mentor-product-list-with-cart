@@ -1,3 +1,5 @@
+import '../styles/scss/OrderInfo.scss';
+
 export default function OrderInfo() {
   return (
     <div className='order-info'>

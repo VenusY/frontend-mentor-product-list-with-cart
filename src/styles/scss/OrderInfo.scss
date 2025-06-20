@@ -1,0 +1,25 @@
+@use './util' as u;
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 24px;
+  margin-bottom: 24px;
+  background: var(--light-peach);
+  border-radius: 5px;
+
+  &__tree-icon {
+    width: 20px;
+  }
+
+  &__message {
+    font-size: u.rem(14);
+    color: var(--rose-900);
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+}
