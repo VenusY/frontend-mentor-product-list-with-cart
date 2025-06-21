@@ -1,3 +1,5 @@
+import '../styles/scss/OrderItem.scss';
+
 export default function OrderItem({ name, quantity, price }) {
   return (
     <div className='order-item'>

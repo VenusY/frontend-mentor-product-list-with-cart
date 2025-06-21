@@ -1,0 +1,53 @@
+@use './util' as u;
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 15px;
+  border-bottom: 1px solid hsl(0, 0%, 96%);
+
+  &__name {
+    margin-bottom: u.rem(6);
+    font-size: u.rem(14);
+    font-weight: 600;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    font-size: u.rem(14);
+    color: var(--rose-500);
+  }
+
+  &__quantity {
+    margin-right: 17px;
+    font-weight: 600;
+    color: var(--red);
+  }
+
+  &__price {
+    margin-right: 8px;
+  }
+
+  &__total {
+    font-weight: 600;
+  }
+
+  &__remove-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    background: transparent;
+    border: 2px solid var(--rose-300);
+    border-radius: 50%;
+  }
+
+  &__remove-icon {
+    width: 10px;
+  }
+}
