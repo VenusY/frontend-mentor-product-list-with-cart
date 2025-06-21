@@ -15,5 +15,11 @@
     font-size: u.rem(16);
     font-weight: 600;
     color: var(--white);
+    transition: background 100ms linear;
+
+    &:hover,
+    &:focus-visible {
+      background: hsl(14, 85%, 32%);
+    }
   }
 }
