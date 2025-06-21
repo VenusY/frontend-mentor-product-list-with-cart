@@ -11,7 +11,13 @@ export default function Cart({ emptyCart, addedItems }) {
 
   return (
     <section className='cart'>
-      <h2 className='cart__heading'>Your Cart ({quantity})</h2>
+      <h2
+        className={`cart__heading ${
+          emptyCart ? '' : 'cart__heading--s-margin'
+        }`}
+      >
+        Your Cart ({quantity})
+      </h2>
 
       {emptyCart ? <CartPlaceholder /> : <Order />}
     </section>

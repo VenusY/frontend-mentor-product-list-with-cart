@@ -11,5 +11,9 @@
     font-weight: 700;
     line-height: 1.2;
     color: var(--red);
+
+    &--s-margin {
+      margin-bottom: u.rem(8);
+    }
   }
 }
