@@ -4,12 +4,12 @@ import Product from '../Product';
 export default function Menu() {
   return (
     <div className='menu'>
-      {menu.map((item) => (
+      {menu.map((product) => (
         <Product
-          key={item.name}
-          name={item.name}
-          category={item.category}
-          price={item.price}
+          key={product.name}
+          name={product.name}
+          category={product.category}
+          price={product.price}
         />
       ))}
     </div>
