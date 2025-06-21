@@ -7,7 +7,7 @@ export default function OrderList() {
   const addedItemsArray = [...addedItems];
 
   return (
-    <div>
+    <div className='order__list'>
       {addedItemsArray.map((item) => (
         <OrderItem
           key={item[0].name}
