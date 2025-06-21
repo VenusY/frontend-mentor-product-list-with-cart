@@ -1,3 +1,5 @@
+import '../styles/scss/OrderTotal.scss';
+
 export default function OrderTotal() {
   return (
     <section className='order-total'>

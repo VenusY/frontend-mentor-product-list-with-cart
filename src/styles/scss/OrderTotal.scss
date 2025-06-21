@@ -1,0 +1,18 @@
+@use './util' as u;
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  color: var(--rose-900);
+
+  &__heading {
+    font-size: u.rem(14);
+  }
+
+  &__total {
+    font-size: u.rem(24);
+    font-weight: 700;
+  }
+}
