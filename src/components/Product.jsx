@@ -1,3 +1,4 @@
+import '../styles/scss/Product.scss';
 import ProductImage from './ProductImage';
 
 export default function Product({ name, category, price, image }) {
