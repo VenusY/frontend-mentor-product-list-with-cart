@@ -1,0 +1,20 @@
+.add-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  padding: 11px 26px;
+  bottom: 0;
+  transform: translateY(50%);
+  background: var(--white);
+  border: 1px solid var(--rose-500);
+  border-radius: 1000px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--rose-900);
+
+  &__icon {
+    width: 21px;
+  }
+}

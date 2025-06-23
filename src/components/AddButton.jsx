@@ -1,3 +1,5 @@
+import '../styles/scss/AddButton.scss';
+
 export default function AddButton() {
   return (
     <button className='add-button'>
