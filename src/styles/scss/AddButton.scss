@@ -13,6 +13,15 @@
   font-size: 14px;
   font-weight: 600;
   color: var(--rose-900);
+  transition-property: color, border;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+
+  &:hover,
+  &:focus-visible {
+    border: 1px solid var(--red);
+    color: var(--red);
+  }
 
   &__icon {
     width: 21px;
