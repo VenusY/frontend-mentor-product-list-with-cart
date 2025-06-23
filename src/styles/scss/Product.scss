@@ -1,6 +1,31 @@
 @use './util' as u;
 
 .product {
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 37px;
+  }
+
+  &__image {
+    border-radius: 10px;
+  }
+
+  &__mobile-image {
+    width: 100%;
+  }
+
+  &__desktop-image {
+    display: none;
+  }
+
   &__category {
     margin-bottom: u.rem(2);
     font-size: u.rem(14);
