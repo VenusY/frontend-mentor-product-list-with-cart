@@ -6,15 +6,12 @@ import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 
 export default function App() {
-  const [emptyCart, setEmptyCart] = useState(true);
   const [addedItems, setAddedItems] = useState(new Map());
   const [displayModal, setDisplayModal] = useState(false);
 
   return (
     <PageContext.Provider
       value={{
-        emptyCart,
-        setEmptyCart,
         addedItems,
         setAddedItems,
         displayModal,
@@ -22,7 +19,7 @@ export default function App() {
       }}
     >
       <ProductList />
-      <Cart emptyCart={emptyCart} addedItems={addedItems} />
+      <Cart addedItems={addedItems} />
     </PageContext.Provider>
   );
 }
