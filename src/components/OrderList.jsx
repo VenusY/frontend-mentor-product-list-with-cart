@@ -10,10 +10,10 @@ export default function OrderList() {
     <div className='order__list'>
       {addedItemsArray.map((item) => (
         <OrderItem
-          key={item[0].name}
-          name={item[0].name}
-          quantity={item[1]}
-          price={item[0].price}
+          key={item[0]}
+          name={item[0]}
+          quantity={item[1].quantity}
+          price={item[1].price}
         />
       ))}
     </div>

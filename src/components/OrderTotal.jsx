@@ -7,7 +7,7 @@ export default function OrderTotal() {
   let total = 0;
 
   for (let [key, value] of addedItems) {
-    const cost = key.price * value;
+    const cost = value.price * value.quantity;
     total += cost;
   }
 
