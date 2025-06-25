@@ -1,0 +1,44 @@
+.change-quantity-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 159px;
+  padding: 11.5px 13px;
+  bottom: 0;
+  transform: translateY(50%);
+  background: var(--red);
+  border-radius: 1000px;
+
+  &__button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    transition: background 100ms linear;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--white);
+
+      .change-quantity-panel__icon > path {
+        fill: var(--red);
+      }
+    }
+  }
+
+  &__icon > path {
+    transition: fill 100ms linear;
+  }
+
+  &__quantity {
+    font-size: 14px;
+    color: var(--white);
+  }
+}
