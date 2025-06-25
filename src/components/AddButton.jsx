@@ -1,8 +1,23 @@
 import '../styles/scss/AddButton.scss';
+import { useContext } from 'react';
+import { PageContext } from '../contexts/PageContext';
 
-export default function AddButton() {
+export default function AddButton({ name, price }) {
+  const { addedItems, setAddedItems } = useContext(PageContext);
+
+  function addProduct() {
+    let updatedAddedItems = [];
+
+    for (let item of addedItems) {
+      updatedAddedItems.push(item);
+    }
+
+    updatedAddedItems.push([name, { price: price, quantity: 1 }]);
+    setAddedItems(new Map(updatedAddedItems));
+  }
+
   return (
-    <button className='add-button'>
+    <button className='add-button' onClick={addProduct}>
       <img
         src={require('../assets/images/icon-add-to-cart.svg')}
         alt='Cart'

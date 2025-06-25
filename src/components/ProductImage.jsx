@@ -3,7 +3,7 @@ import { PageContext } from '../contexts/PageContext';
 import AddButton from './AddButton';
 import ChangeQuantityPanel from './ChangeQuantityPanel';
 
-export default function ProductImage({ name, image }) {
+export default function ProductImage({ name, price, image }) {
   const { addedItems } = useContext(PageContext);
 
   return (
@@ -22,7 +22,7 @@ export default function ProductImage({ name, image }) {
       {addedItems.has(name) ? (
         <ChangeQuantityPanel name={name} />
       ) : (
-        <AddButton />
+        <AddButton name={name} price={price} />
       )}
     </div>
   );
