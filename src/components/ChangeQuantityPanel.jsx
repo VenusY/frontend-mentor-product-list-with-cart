@@ -3,11 +3,42 @@ import { useContext } from 'react';
 import { PageContext } from '../contexts/PageContext';
 
 export default function ChangeQuantityPanel({ name }) {
-  const { addedItems } = useContext(PageContext);
+  const { addedItems, setAddedItems } = useContext(PageContext);
+
+  function increaseQuantity() {
+    let updatedAddedItems = [...addedItems];
+    let updatedMap = new Map(updatedAddedItems);
+
+    updatedMap.set(name, {
+      price: addedItems.get(name).price,
+      quantity: ++addedItems.get(name).quantity,
+    });
+
+    setAddedItems(updatedMap);
+  }
+
+  function decreaseQuantity() {
+    let updatedAddedItems = [...addedItems];
+    let updatedMap = new Map(updatedAddedItems);
+
+    if (addedItems.get(name).quantity === 1) {
+      updatedMap.delete(name);
+    } else {
+      updatedMap.set(name, {
+        price: addedItems.get(name).price,
+        quantity: --addedItems.get(name).quantity,
+      });
+    }
+
+    setAddedItems(updatedMap);
+  }
 
   return (
     <div className='change-quantity-panel'>
-      <button className='change-quantity-panel__button'>
+      <button
+        className='change-quantity-panel__button'
+        onClick={decreaseQuantity}
+      >
         <svg
           className='change-quantity-panel__icon'
           xmlns='http://www.w3.org/2000/svg'
@@ -24,7 +55,10 @@ export default function ChangeQuantityPanel({ name }) {
         {addedItems.get(name).quantity}
       </p>
 
-      <button className='change-quantity-panel__button'>
+      <button
+        className='change-quantity-panel__button'
+        onClick={increaseQuantity}
+      >
         <svg
           className='change-quantity-panel__icon'
           xmlns='http://www.w3.org/2000/svg'
