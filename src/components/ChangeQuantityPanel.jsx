@@ -6,8 +6,8 @@ export default function ChangeQuantityPanel({ name }) {
   const { addedItems, setAddedItems } = useContext(PageContext);
 
   function increaseQuantity() {
-    let updatedAddedItems = [...addedItems];
-    let updatedMap = new Map(updatedAddedItems);
+    const updatedAddedItems = [...addedItems];
+    const updatedMap = new Map(updatedAddedItems);
 
     updatedMap.set(name, {
       price: addedItems.get(name).price,
@@ -18,8 +18,8 @@ export default function ChangeQuantityPanel({ name }) {
   }
 
   function decreaseQuantity() {
-    let updatedAddedItems = [...addedItems];
-    let updatedMap = new Map(updatedAddedItems);
+    const updatedAddedItems = [...addedItems];
+    const updatedMap = new Map(updatedAddedItems);
 
     if (addedItems.get(name).quantity === 1) {
       updatedMap.delete(name);
