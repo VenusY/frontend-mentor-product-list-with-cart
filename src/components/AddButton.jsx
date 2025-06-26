@@ -6,12 +6,7 @@ export default function AddButton({ name, price }) {
   const { addedItems, setAddedItems } = useContext(PageContext);
 
   function addProduct() {
-    let updatedAddedItems = [];
-
-    for (let item of addedItems) {
-      updatedAddedItems.push(item);
-    }
-
+    let updatedAddedItems = [...addedItems];
     updatedAddedItems.push([name, { price: price, quantity: 1 }]);
     setAddedItems(new Map(updatedAddedItems));
   }
