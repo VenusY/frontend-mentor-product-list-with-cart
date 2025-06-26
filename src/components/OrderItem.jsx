@@ -1,6 +1,18 @@
 import '../styles/scss/OrderItem.scss';
+import { useContext } from 'react';
+import { PageContext } from '../contexts/PageContext';
 
 export default function OrderItem({ name, quantity, price }) {
+  const { addedItems, setAddedItems } = useContext(PageContext);
+
+  function deleteProduct() {
+    const updatedAddedItems = [...addedItems];
+    const updatedMap = new Map(updatedAddedItems);
+
+    updatedMap.delete(name);
+    setAddedItems(updatedMap);
+  }
+
   return (
     <div className='order-item'>
       <div className='order-item__info'>
@@ -13,7 +25,7 @@ export default function OrderItem({ name, quantity, price }) {
         </div>
       </div>
 
-      <button className='order-item__remove-button'>
+      <button className='order-item__remove-button' onClick={deleteProduct}>
         <img
           src={require('../assets/images/icon-remove-item.svg')}
           alt='Remove'
