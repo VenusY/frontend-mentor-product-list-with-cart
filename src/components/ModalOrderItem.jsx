@@ -8,11 +8,13 @@ export default function ModalOrderItem({ image, name, price, quantity }) {
 
         <div className='modal-order-item__info'>
           <p className='modal-order-item__quantity'>{quantity}x</p>
-          <p className='modal-order-item__price'>@ ${price}</p>
+          <p className='modal-order-item__price'>@ ${price.toFixed(2)}</p>
         </div>
       </div>
 
-      <p className='modal-order-item__total'>${price * quantity}</p>
+      <p className='modal-order-item__total'>
+        ${(price * quantity).toFixed(2)}
+      </p>
     </div>
   );
 }
