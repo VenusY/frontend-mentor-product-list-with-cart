@@ -1,0 +1,40 @@
+@use './util' as u;
+
+.modal {
+  height: 100%;
+  padding: 40px 24px 24px;
+  overflow: auto;
+  background: var(--white);
+  border-radius: 10px 10px 0 0;
+
+  &__background {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 95px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &__icon {
+    width: 48px;
+    margin-bottom: 24px;
+  }
+
+  &__heading {
+    margin-bottom: u.rem(7);
+    font-size: u.rem(40);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--rose-900);
+  }
+
+  &__message {
+    color: var(--rose-400);
+  }
+
+  &__order {
+    background: var(--light-peach);
+  }
+}

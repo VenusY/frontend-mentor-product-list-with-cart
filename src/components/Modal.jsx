@@ -1,3 +1,4 @@
+import '../styles/scss/Modal.scss';
 import { useContext } from 'react';
 import { PageContext } from '../contexts/PageContext';
 import ModalOrderItem from './ModalOrderItem';
