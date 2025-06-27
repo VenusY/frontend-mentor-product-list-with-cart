@@ -2,9 +2,11 @@ import { useContext } from 'react';
 import { PageContext } from '../contexts/PageContext';
 import ModalOrderItem from './ModalOrderItem';
 import OrderTotal from './OrderTotal';
+import ActionButton from './ActionButton';
 
 export default function Modal() {
-  const { addedItems } = useContext(PageContext);
+  const { addedItems, setAddedItems, setDisplayModal } =
+    useContext(PageContext);
   const addedItemsArray = [...addedItems];
   const productImageMap = new Map([
     [
@@ -42,6 +44,11 @@ export default function Modal() {
     ],
   ]);
 
+  function startNewOrder() {
+    setDisplayModal(false);
+    setAddedItems(new Map());
+  }
+
   return (
     <div className='modal__background'>
       <section className='modal'>
@@ -59,6 +66,7 @@ export default function Modal() {
           <div className='modal__order-list'>
             {addedItemsArray.map((item) => (
               <ModalOrderItem
+                key={item[0]}
                 image={productImageMap.get(item[0])}
                 name={item[0]}
                 price={item[1].price}
@@ -70,7 +78,10 @@ export default function Modal() {
           <OrderTotal />
         </div>
 
-        <button className='modal__new-order-button'>Start New Order</button>
+        <ActionButton
+          buttonText='Start New Order'
+          handleClick={startNewOrder}
+        />
       </section>
     </div>
   );
