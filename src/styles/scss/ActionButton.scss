@@ -1,0 +1,25 @@
+@use './util' as u;
+
+.action-button {
+  cursor: pointer;
+  width: 100%;
+  padding: 16px;
+  background: var(--red);
+  border: none;
+  border-radius: 1000px;
+  font-size: u.rem(16);
+  font-weight: 600;
+  color: var(--white);
+  transition-property: background, transform;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+
+  &:hover,
+  &:focus-visible {
+    background: hsl(14, 85%, 32%);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
