@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { PageContext } from './contexts/PageContext';
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
+import Modal from './components/Modal';
 
 export default function App() {
   const [addedItems, setAddedItems] = useState(new Map());
@@ -20,6 +21,7 @@ export default function App() {
     >
       <ProductList />
       <Cart addedItems={addedItems} />
+      {displayModal && <Modal />}
     </PageContext.Provider>
   );
 }
