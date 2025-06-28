@@ -7,6 +7,10 @@
   margin-bottom: 22px;
   color: var(--rose-900);
 
+  &--modal {
+    margin-bottom: 0;
+  }
+
   &__heading {
     font-size: u.rem(14);
   }
