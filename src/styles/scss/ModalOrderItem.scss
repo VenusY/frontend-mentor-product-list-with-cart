@@ -1,0 +1,55 @@
+@use './util' as u;
+
+.modal-order-item {
+  display: flex;
+  align-items: center;
+  padding-block: 20px;
+  border-bottom: 1px solid hsl(27, 31%, 93%);
+
+  &__image {
+    width: 48px;
+    height: 48px;
+    margin-right: 15px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+  }
+
+  &__text-section {
+    max-width: 155px;
+    margin-right: auto;
+  }
+
+  &__name {
+    margin-bottom: u.rem(6);
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: u.rem(14);
+    font-weight: 600;
+    color: var(--rose-900);
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+
+  &__quantity {
+    font-size: u.rem(14);
+    font-weight: 600;
+    color: var(--red);
+  }
+
+  &__price {
+    font-size: u.rem(14);
+    color: var(--rose-500);
+  }
+
+  &__total {
+    font-weight: 600;
+    color: var(--rose-900);
+  }
+}

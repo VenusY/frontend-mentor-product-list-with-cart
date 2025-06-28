@@ -1,3 +1,5 @@
+import '../styles/scss/ModalOrderItem.scss';
+
 export default function ModalOrderItem({ image, name, price, quantity }) {
   return (
     <div className='modal-order-item'>
