@@ -16,7 +16,7 @@ export default function Order() {
   return (
     <div className='order'>
       <OrderList />
-      <OrderTotal />
+      <OrderTotal modal={false} />
       <OrderInfo />
       <ActionButton buttonText='Confirm Order' handleClick={confirmOrder} />
     </div>
