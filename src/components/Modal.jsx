@@ -50,12 +50,13 @@ export default function Modal() {
     setAddedItems(new Map());
   }
 
-  function hideModal() {
+  function hideModal(e) {
     setDisplayModal(false);
   }
 
   return (
-    <div className='modal__background' onClick={hideModal}>
+    <div className='modal__container'>
+      <div className='modal__background' onClick={hideModal}></div>
       <section className='modal'>
         <img
           src={require('../assets/images/icon-order-confirmed.svg')}
