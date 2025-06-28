@@ -46,10 +46,14 @@
   }
 
   &__order {
-    padding: 4px 24px 24px;
+    padding: 4px 24px 22px;
     margin-bottom: 32px;
     overflow: hidden;
     background: var(--light-peach);
     border-radius: 8px;
+  }
+
+  &__order-list {
+    margin-bottom: 23px;
   }
 }
