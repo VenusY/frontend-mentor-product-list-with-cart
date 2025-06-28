@@ -81,7 +81,7 @@ export default function Modal() {
             ))}
           </div>
 
-          <OrderTotal />
+          <OrderTotal modal={true} />
         </div>
 
         <ActionButton
