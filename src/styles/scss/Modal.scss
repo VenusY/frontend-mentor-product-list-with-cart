@@ -1,7 +1,6 @@
 @use './util' as u;
 
 .modal {
-  flex: initial;
   padding: 40px 24px 24px;
   overflow: auto;
   background: var(--white);
@@ -10,7 +9,6 @@
   &__container {
     display: flex;
     flex-direction: column;
-    justify-content: end;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -19,8 +17,12 @@
     background: rgba(0, 0, 0, 0.6);
   }
 
-  &__background {
-    flex: 1 0 95px;
+  &__inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+    padding-top: 95px;
   }
 
   &__icon {
@@ -51,5 +53,30 @@
 
   &__order-list {
     margin-bottom: 23px;
+  }
+}
+
+@media screen and (min-width: 792px) {
+  .modal {
+    margin-block: auto;
+    overflow: unset;
+    border-radius: 10px;
+
+    &__container {
+      justify-content: unset;
+      align-items: center;
+      overflow: auto;
+    }
+
+    &__inner-container {
+      display: flex;
+      justify-content: unset;
+      align-items: center;
+      width: 100vw;
+      min-height: 100vh;
+      padding-block: 80px;
+      overflow: auto;
+      border-radius: 0;
+    }
   }
 }
