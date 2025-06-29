@@ -56,39 +56,45 @@ export default function Modal() {
 
   return (
     <div className='modal__container'>
-      <div className='modal__background' onClick={hideModal}></div>
-      <section className='modal'>
-        <img
-          src={require('../assets/images/icon-order-confirmed.svg')}
-          alt='Checkmark'
-          className='modal__icon'
-        />
+      <div className='modal__inner-container' onClick={hideModal}>
+        <section
+          className='modal'
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          <img
+            src={require('../assets/images/icon-order-confirmed.svg')}
+            alt='Checkmark'
+            className='modal__icon'
+          />
 
-        <h2 className='modal__heading'>Order Confirmed</h2>
+          <h2 className='modal__heading'>Order Confirmed</h2>
 
-        <p className='modal__message'>We hope you enjoy your food!</p>
+          <p className='modal__message'>We hope you enjoy your food!</p>
 
-        <div className='modal__order'>
-          <div className='modal__order-list'>
-            {addedItemsArray.map((item) => (
-              <ModalOrderItem
-                key={item[0]}
-                image={productImageMap.get(item[0])}
-                name={item[0]}
-                price={item[1].price}
-                quantity={item[1].quantity}
-              />
-            ))}
+          <div className='modal__order'>
+            <div className='modal__order-list'>
+              {addedItemsArray.map((item) => (
+                <ModalOrderItem
+                  key={item[0]}
+                  image={productImageMap.get(item[0])}
+                  name={item[0]}
+                  price={item[1].price}
+                  quantity={item[1].quantity}
+                />
+              ))}
+            </div>
+
+            <OrderTotal modal={true} />
           </div>
 
-          <OrderTotal modal={true} />
-        </div>
-
-        <ActionButton
-          buttonText='Start New Order'
-          handleClick={startNewOrder}
-        />
-      </section>
+          <ActionButton
+            buttonText='Start New Order'
+            handleClick={startNewOrder}
+          />
+        </section>
+      </div>
     </div>
   );
 }
