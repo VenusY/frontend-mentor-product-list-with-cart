@@ -16,8 +16,8 @@
   }
 
   &__text-section {
-    max-width: 155px;
     margin-right: auto;
+    overflow: hidden;
   }
 
   &__name {
@@ -28,13 +28,13 @@
     font-weight: 600;
     color: var(--rose-900);
     text-overflow: ellipsis;
-    text-wrap: nowrap;
   }
 
   &__info {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 17px;
+    gap: 0 17px;
   }
 
   &__quantity {
@@ -49,6 +49,7 @@
   }
 
   &__total {
+    margin-left: 10px;
     font-weight: 600;
     color: var(--rose-900);
   }
