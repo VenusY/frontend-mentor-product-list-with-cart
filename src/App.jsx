@@ -19,9 +19,11 @@ export default function App() {
         setDisplayModal,
       }}
     >
-      <ProductList />
-      <Cart addedItems={addedItems} />
-      {displayModal && <Modal />}
+      <div className='page'>
+        <ProductList />
+        <Cart addedItems={addedItems} />
+        {displayModal && <Modal />}
+      </div>
     </PageContext.Provider>
   );
 }

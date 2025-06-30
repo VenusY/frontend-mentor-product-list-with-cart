@@ -17,3 +17,9 @@
     }
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .cart {
+    width: min(384px, 100%);
+  }
+}

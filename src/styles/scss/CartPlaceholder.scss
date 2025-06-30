@@ -4,7 +4,7 @@
   &__image {
     width: 120px;
     margin-inline: auto;
-    margin-bottom: 23px;
+    margin-bottom: 16px;
   }
 
   &__text {
@@ -12,5 +12,14 @@
     font-size: u.rem(14);
     font-weight: 600;
     color: var(--rose-500);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cart-placeholder {
+    &__image {
+      width: 128px;
+      margin-bottom: 14px;
+    }
   }
 }

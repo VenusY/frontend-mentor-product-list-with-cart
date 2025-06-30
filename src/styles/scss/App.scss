@@ -24,3 +24,16 @@ body {
   background: var(--light-peach);
   font-family: var(--ff);
 }
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 88px;
+  }
+
+  .page {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 32px;
+  }
+}
