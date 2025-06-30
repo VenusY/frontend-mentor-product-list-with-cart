@@ -1,12 +1,6 @@
 @use './util' as u;
 
 .product {
-  margin-bottom: 22px;
-
-  &:last-child {
-    margin-bottom: 30px;
-  }
-
   &__image-container {
     display: flex;
     justify-content: center;

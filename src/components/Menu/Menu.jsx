@@ -1,3 +1,4 @@
+import '../../styles/scss/Menu.scss';
 import menu from './data.json';
 import Product from '../Product';
 
